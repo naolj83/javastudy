@@ -9,6 +9,9 @@ public class Prob3 {
 		Scanner scanner = new Scanner(System.in);
 
 		/* 코드 작성 */
+		int a = scanner.nextInt();
+		double b = scanner.nextDouble();
+		String c = scanner.nextLine();
 		
 		scanner.close();
 	}

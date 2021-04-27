@@ -10,6 +10,7 @@ public class Prob01 {
 
 		/* 코드 작성 */
 		
+		
 		scanner.close();
  	}
 }
