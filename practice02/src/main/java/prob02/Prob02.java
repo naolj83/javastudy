@@ -22,10 +22,12 @@ public class Prob02 {
 		}
 		
 		/* 출력 */
-		System.out.println("\n배열에 저장된 값을 더하세요 : " +  sum );
+		System.out.println();
+		System.out.println("배열에 저장된 값을 더하세요 : " +  sum );
+		System.out.println();
 		
 		/* 자원정리 */
-		System.out.println("\n배열을 정리하세요 :");
+		System.out.println("배열을 정리하세요 :");
 		for(int i=0; i < intArray.length; i++) {
 			System.out.print(intArray[i] + " ");
 		}
