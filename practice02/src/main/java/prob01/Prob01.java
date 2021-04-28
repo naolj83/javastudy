@@ -9,8 +9,16 @@ public class Prob01 {
 		final int[] MONEYS = { 50000, 10000, 5000, 1000, 500, 100, 50, 10, 5, 1 };
 		
 		/* 코드 작성 */
-		System.out.println(MONEYS.length);
-		
+		System.out.print("금액 : ");
+		int won = scanner.nextInt();
+
+		int count = 0;
+		for (int i = 0; i < MONEYS.length; i++) {
+			count = won / MONEYS[i];
+			won = won % MONEYS[i];
+			System.out.println(MONEYS[i] + "원: " + count + "개");
+		}
+
 		scanner.close();
  	}
 }
