@@ -12,8 +12,6 @@ public class Prob02 {
 
 		/* 키보드에서 배열 크기만큼 입력 받아 배열에 저장하는 코드 */
 		System.out.println("5개의 숫자를 입력하세요.");
-		
-		/* 키보드에서 배열 크기만큼 입력 받아 배열에 저장하는 코드 */
 		for (int i = 0; i < intArray.length; i++) {
 			intArray[i] = scanner.nextInt();
 		}
