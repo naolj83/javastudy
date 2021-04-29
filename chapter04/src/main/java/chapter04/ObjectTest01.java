@@ -8,8 +8,8 @@ public class ObjectTest01 {
 		// Class klass = p.getClass();
 		System.out.println(p.getClass()); // reflection
 		System.out.println(p.hashCode()); // address 기반의 해싱값
-									// address X
-									// reference X
+										// address X
+										// reference X
 		System.out.println(p.toString()); // getClass() + "@" + hashCode()
 		System.out.println(p);
 	}
