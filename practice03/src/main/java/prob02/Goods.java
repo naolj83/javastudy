@@ -2,10 +2,14 @@ package prob02;
 
 public class Goods {
 
-	String goodsName;
-	int price;
-	int count;
+	private String goodsName;
+	private int price;
+	private int count;
 
+	public Goods() {
+		
+	}
+	
 	public Goods(String goodsName, int price, int count) {
 		this.goodsName = goodsName;
 		this.price = price;
@@ -36,7 +40,4 @@ public class Goods {
 		this.count = count;
 	}
 
-	public void show() {
-		System.out.println(goodsName + "(가격: " + price + "원)이 " + count + "개 입고 되었습니다.");
-	}
 }
