@@ -20,7 +20,7 @@ public class GoodsApp {
 
 
 		// 상품 출
-		
+		System.out.println(goods);
 		
 		// 자원정리
 		scanner.close();
