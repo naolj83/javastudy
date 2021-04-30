@@ -29,10 +29,11 @@ public class LinkedListTest {
 			System.out.println(s);
 		}
 
-		// 순회3 (for~each) -> 추천
+		// 순회3 (for~each)
 		for (String s : list) {
 			System.out.println(s);
 		}
+
 	}
 
 }
