@@ -38,8 +38,7 @@ public class DateTest {
 		// 초
 		int seconds = d.getSeconds();
 
-		System.out
-				.println((year + 1900) + "-" + (month + 1) + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
+		System.out.println((year + 1900) + "-" + (month + 1) + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
 	}
 
 }
