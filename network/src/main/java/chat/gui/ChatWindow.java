@@ -1,4 +1,5 @@
 package chat.gui;
+
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
@@ -21,7 +22,6 @@ public class ChatWindow {
 	private TextField textField;
 	private TextArea textArea;
 
-	// 소켓 추가해서 세팅
 	public ChatWindow(String nickname) {
 		frame = new Frame(nickname);
 		pannel = new Panel();
@@ -34,7 +34,6 @@ public class ChatWindow {
 		/**
 		 * 1. UI 초기화
 		 */
-
 		// Button
 		buttonSend.setBackground(Color.GRAY);
 		buttonSend.setForeground(Color.WHITE);
@@ -48,17 +47,15 @@ public class ChatWindow {
 		// Textfield
 		textField.setColumns(80);
 		textField.addKeyListener(new KeyAdapter() {
-
 			@Override
-			public void keyReleased(KeyEvent e) {
+			public void keyPressed(KeyEvent e) {
 				char keyCode = e.getKeyChar();
 				if (keyCode == KeyEvent.VK_ENTER) {
 					sendMessage();
 				}
 			}
-
 		});
-		
+
 		// Pannel
 		pannel.setBackground(Color.LIGHT_GRAY);
 		pannel.add(textField);
@@ -73,41 +70,42 @@ public class ChatWindow {
 		frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				finish();
-			
 			}
 		});
 		frame.setVisible(true);
 		frame.pack();
 
 		/**
-		 * 1. IOStream 생성
+		 * 2. IOStream 생성
 		 */
-		
+
 		/**
 		 * 3. Chat Client Thread 생성(Receive Thread)
 		 */
 	}
+
 	private void finish() {
 		System.out.println("소켓 닫기 or 방나가기 프로토콜 구현");
 		System.exit(0);
 	}
-	
-	private void sendMessage() {	// 버튼을 눌렀을 때
+
+	private void sendMessage() {
 		String message = textField.getText();
 		System.out.println("프로토콜 구현:" + message);
+		updateTextArea("마이콜:" + message);
 		textField.setText("");
 		textField.requestFocus();
-		
 	}
+
 	private void updateTextArea(String message) {
 		textArea.append(message);
 		textArea.append("\n");
 	}
-	
-	private class ChatClientThread extends Thread{
+
+	private class ChatClientThread extends Thread {
 		@Override
 		public void run() {
-			//updateTextArea("...");
+			// updateTextArea("...");
 		}
 	}
 }

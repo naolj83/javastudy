@@ -21,18 +21,16 @@ public class ChatClientApp {
 		}
 		
 		scanner.close();
-
-		// 1. create socket
-		// 2. connect to server
-		// 3. create iostream
-		// 4. join
-		// String line = br.readLine();
 		
+		//1. create socket
+		//2. connect to server
+		//3. create iostream
+		//4. join
+		// String line = br.readLine();
 		String line = "JOIN:OK";
 		if("JOIN:OK".equals(line)) {
 			new ChatWindow(name).show();
+		}
 	}
-
-}
 
 }
